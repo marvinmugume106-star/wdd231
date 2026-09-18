@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Directory — Chamber Member Directory</title>
+  <meta name="author" content="Kaluba Phillip">
+  <meta name="description" content="Browse the Commerce City Chamber member directory. View businesses by membership level (Gold, Silver, Bronze, NP) and filter by grid or list view.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chamber Member Directory — Browse Local Businesses">
+  <meta property="og:description" content="Browse the Commerce City Chamber member directory. View businesses by membership level and connect with local enterprises.">
+  <meta property="og:image" content="https://mexphillips.github.io/wdd231/chamber/images/hero.jpg">
+  <meta property="og:url" content="https://mexphillips.github.io/wdd231/chamber/directory.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://mexphillips.github.io/wdd231/chamber/directory.html">
+  
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/override.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/logo.webp" alt="Chamber Logo" class="logo">
+      <div class="header-info">
+        <h1>Chamber of Commerce</h1>
+        <p class="tagline">Building Stronger Communities</p>
+      </div>
+      <div class="header-socials">
+        <a href="#" title="Facebook"><i>f</i></a>
+        <a href="#" title="LinkedIn"><i>in</i></a>
+      </div>
+    </div>
+    <nav>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+    <div class="current-date" id="current-date"></div>
+  </header>
+
+  <main class="directory-page">
+    <section class="directory-hero">
+      <h2>Chamber Member Directory</h2>
+      <p>Connect with local businesses and explore the opportunities in Commerce City.</p>
+    </section>
+
+    <section class="directory-controls">
+      <div class="view-toggle">
+        <button id="grid-view-btn" class="view-btn active" title="Switch to grid view">
+          <span>⊞ Grid</span>
+        </button>
+        <button id="list-view-btn" class="view-btn" title="Switch to list view">
+          <span>≡ List</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="directory-container">
+      <div id="members-container" class="members-grid">
+        <p class="loading">Loading members...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="images/logo.webp" alt="Chamber Logo" class="logo-small">
+        <h3>Chamber of Commerce</h3>
+        <p>123 Business Avenue<br>Commerce City, ST 12345<br>Phone: (555) 123-4567<br>Email: info@chamber.org</p>
+      </div>
+      <div class="footer-info">
+        <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/site.js" defer></script>
+</body>
+</html>

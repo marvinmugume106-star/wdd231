@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marvin Mugume">
+    <meta name="description" content="Course homepage for Marvin Mugume showing projects, certificates, and portfolio work in responsive layout.">
+    <title>Marvin Mugume Course Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+  </head>
+  <body>
+    <header>
+      <div class="site-brand">
+        <img src="images/logo.svg" alt="Marvin Mugume logo" />
+        <div class="site-name">Marvin Mugume</div>
+      </div>
+
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">☰</button>
+
+      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chamber/index.html">Chamber Project</a></li>
+          <li><a href="chamber/directory.html">Directory</a></li>
+          <li><a href="final.html">Final Project</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Marvin Mugume | Course Home Page</h1>
+
+      <section class="about-section">
+        <h2>About Me</h2>
+        <p>
+          I'm Marvin Mugume, a passionate software engineering student at BYU with a deep love for
+          learning and problem-solving. I thrive on turning complex challenges into elegant
+          solutions whether it's debugging code, refining web layouts, or optimizing
+          accessibility. My journey is fueled by curiosity, resilience, and a commitment to
+          growth. I enjoy building clean, responsive websites that not only function well but
+          also look great. Every project is a chance to improve, iterate, and push my skills
+          further. Welcome to my course homepage — a reflection of my progress, creativity,
+          and drive to succeed.
+        </p>
+      </section>
+
+      <section class="photo-section">
+        <h2>Student Photo</h2>
+        <img src="images/marvin mugume.jpeg" alt="Portrait of Marvin Mugume" />
+      </section>
+
+      <section class="projects-section">
+        <h2>Projects</h2>
+        <p>
+          A few highlights from my coursework and personal projects — responsive sites,
+          interactive JavaScript features, and accessible layouts. Check the Final Project and
+          Chamber Project pages for details.
+        </p>
+      </section>
+
+      <section class="courses">
+        <h2>Web Certificate Courses</h2>
+        <div class="filters" aria-label="Course filters">
+          <button type="button" id="filterAll" class="active">All</button>
+          <button type="button" id="filterCSE">CSE</button>
+          <button type="button" id="filterWDD">WDD</button>
+        </div>
+        <div id="courses"></div>
+        <p id="totalCredits">Total credits: 0</p>
+      </section>     
+    </main> 
+ 
+    <footer> 
+      <p>© <span id="year"></span> • Marvin Mugume • Uganda</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </footer> 
+
+    <script src="scripts/main.js" defer></script>
+  </body>
+</html>

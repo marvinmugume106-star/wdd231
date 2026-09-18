@@ -1,0 +1,87 @@
+@media (min-width: 768px) {
+  /* Desktop layout: grid with two columns — about (wider) and photo (narrow).
+     Projects and Courses will span both columns below. */
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: auto;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .about-section {
+    grid-column: 1 / 2;
+  }
+
+  .photo-section {
+    grid-column: 2 / 3;
+    max-width: 320px;
+  }
+
+  nav {
+    display: block; /* Show nav menu on desktop */
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  nav li {
+    border: none;
+  }
+
+  nav a {
+    padding: 1rem 2rem;
+  }
+
+  #courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Make section headers full-width inside their sections on desktop */
+  main section h2 {
+    margin: 0 -2rem 1rem -2rem;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Projects and courses should sit below the about/photo row and span full width */
+  .projects-section,
+  .courses {
+    grid-column: 1 / -1;
+  }
+
+  /* Desktop filter button layout: three even buttons */
+  .filters {
+    gap: 1rem;
+  }
+
+  .filters button {
+    flex: 1 1 0;
+    background: #dcdcdc;
+    border: 1px solid #bfbfbf;
+    padding: 0.6rem 1rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+
+  footer .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  /* Hide hamburger on desktop */
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* large.css now contains only desktop (>=768px) overrides; shared styles moved to small.css */

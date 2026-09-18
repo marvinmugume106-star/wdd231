@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Discover — Commerce City</title>
+  <meta name="author" content="Kaluba Phillip">
+  <meta name="description" content="Discover Commerce City: demographics, attractions, events, and member businesses.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Discover Commerce City — Explore Local Gems">
+  <meta property="og:description" content="Explore local attractions, member businesses, and upcoming events that showcase Commerce City's community, culture, and opportunities.">
+  <meta property="og:image" content="https://mexphillips.github.io/wdd231/chamber/images/hero.webp">
+  <meta property="og:url" content="https://mexphillips.github.io/wdd231/chamber/discover.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://mexphillips.github.io/wdd231/chamber/discover.html">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/override.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/logo.webp" alt="Chamber Logo" class="logo">
+    <title>Discover Commerce City — Explore Local Gems</title>
+    <meta name="author" content="Kaluba Phillip">
+    <meta name="description" content="Explore local attractions, member businesses, and upcoming events that showcase Commerce City's community, culture, and opportunities.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Discover Commerce City — Explore Local Gems">
+    <meta property="og:description" content="Explore local attractions, member businesses, and upcoming events that showcase Commerce City's community, culture, and opportunities.">
+    <meta property="og:image" content="https://mexphillips.github.io/wdd231/chamber/images/hero.jpg">
+    <meta property="og:url" content="https://mexphillips.github.io/wdd231/chamber/discover.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://mexphillips.github.io/wdd231/chamber/discover.html">
+      </div>
+      <div    class="header-socials">
+        <a href="#" title="Facebook"><i>f</i></a>
+        <a href="#" title="LinkedIn"><i>in</i></a>
+      </div>
+    
+    <nav>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+      </ul>
+    </nav>
+    <div class="current-date" id="current-date"></div>
+  </header>
+
+  <main class="discover-page">
+    <section class="hero">
+      <img src="images/hero.webp" alt="Discover Commerce City" class="hero-image">
+      <div class="hero-content">
+        <h1>Discover Commerce City</h1>
+        <p>Find local events, attractions, and members that make our community special.</p>
+      </div>
+    </section>
+
+    <section class="demographics">
+      <h2>Community Demographics</h2>
+      <div class="demographics-grid">
+        <div class="stat">
+          <h3>Population</h3>
+          <p>48,500</p>
+        </div>
+        <div class="stat">
+          <h3>Median Age</h3>
+          <p>34.7 years</p>
+        </div>
+        <div class="stat">
+          <h3>Median Household Income</h3>
+          <p>$62,400</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <div class="events-list">
+        <article class="event-card">
+          <h3>Summer Street Festival</h3>
+          <p>Live music, food trucks, and family activities in downtown Commerce City.</p>
+        </article>
+        <article class="event-card">
+          <h3>Artwalk</h3>
+          <p>Local artists open their studios and galleries for a weekend celebration.</p>
+        </article>
+        <article class="event-card">
+          <h3>Farmers Market</h3>
+          <p>Fresh local produce and crafts every Saturday.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="attractions">
+      <h2>Attractions</h2>
+      <div class="attraction-grid">
+        <article class="attraction">
+          <img data-src="images/attraction1.svg" alt="Historic Town Hall" class="lazy" src="images/logo.webp">
+          <h4>Historic Town Hall</h4>
+          <p>A beautifully preserved building hosting community events.</p>
+        </article>
+        <article class="attraction">
+          <img data-src="images/attraction2.svg" alt="River Walk" class="lazy" src="images/logo.webp">
+          <h4>River Walk</h4>
+          <p>Scenic paths along the river with parks and cafes.</p>
+        </article>
+        <article class="attraction">
+          <img data-src="images/attraction3.svg" alt="Market Square" class="lazy" src="images/logo.webp">
+          <h4>Market Square</h4>
+          <p>Shops, events, and seasonal markets in the heart of town.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="members">
+      <h2>Member Directory</h2>
+      <p class="visit-info">Last visit: <span id="last-visit">First time here</span></p>
+      <div id="members-grid" class="members-grid">
+        <p class="loading">Loading members…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="images/logo.webp" alt="Chamber Logo" class="logo-small">
+        <h3>Chamber of Commerce</h3>
+      </div>
+      <div class="footer-info">
+        <p>&copy; <span id="year"></span> Commerce City Chamber</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/discover.js" defer></script>
+  <script src="scripts/site.js" defer></script>
+</body>
+</html>

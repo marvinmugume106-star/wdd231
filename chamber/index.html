@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Home - Local Chamber of Commerce</title>
+    <meta name="author" content="phillip kaluba"> 
+    <meta name="description" content="Welcome to the Chamber of Commerce - Connect, grow, and succeed with local business community.">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Commerce City Chamber — Connect, Grow, Succeed">
+    <meta property="og:description" content="Join the Commerce City Chamber to connect with local businesses, access resources, and grow your presence through events, networking, and member benefits.">
+    
+    <meta property="og:image" content="https://mexphillips.github.io/wdd231/chamber/images/hero.jpg">
+    <meta property="og:url" content="https://mexphillips.github.io/wdd231/chamber/index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://mexphillips.github.io/wdd231/chamber/index.html">
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <link rel="stylesheet" href="styles/override.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.jpg" alt="Chamber Logo" class="logo">
+            <div class="header-info">
+                <h1>Chamber of Commerce</h1>
+                <p class="tagline">Building Stronger Communities</p>
+            </div>
+            <div class="header-socials">
+                <a href="#" title="Facebook"><i>f</i></a>
+                <a href="#" title="LinkedIn"><i>in</i></a>
+            </div>
+        </div>
+        <nav>
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+        <div class="current-date" id="current-date"></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Chamber Hero Image" class="hero-image">
+            <div class="hero-content">
+                <h2>Welcome to Our Chamber</h2>
+                <p>Join our thriving business community and unlock new opportunities for growth and success.</p>
+                <a href="join.html" class="cta-button">Join Us Today</a>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <div class="events-container">
+                <article class="event-card">
+                    <h3>Monthly Networking Breakfast</h3>
+                    <p><strong>Date:</strong> December 5, 2025</p>
+                    <p><strong>Time:</strong> 7:30 AM - 9:00 AM</p>
+                    <p><strong>Location:</strong> Downtown Convention Center</p>
+                    <p>Connect with fellow business leaders and expand your professional network over breakfast.</p>
+                </article>
+                <article class="event-card">
+                    <h3>Business Leadership Summit</h3>
+                    <p><strong>Date:</strong> December 12, 2025</p>
+                    <p><strong>Time:</strong> 9:00 AM - 4:00 PM</p>
+                    <p><strong>Location:</strong> Hilton Hotel</p>
+                    <p>Expert speakers discuss the future of local business and economic development strategies.</p>
+                </article>
+                <article class="event-card">
+                    <h3>Holiday Mixer & Celebration</h3>
+                    <p><strong>Date:</strong> December 18, 2025</p>
+                    <p><strong>Time:</strong> 5:00 PM - 8:00 PM</p>
+                    <p><strong>Location:</strong> Grand Ballroom</p>
+                    <p>Celebrate the year's successes with members and enjoy festive networking.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Weather</h2>
+            <div id="weather-container" class="weather-container">
+                <p class="loading">Loading weather data...</p>
+            </div>
+        </section>
+
+        
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlights-container" class="spotlights-container">
+                <p class="loading">Loading member spotlights...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.jpg" alt="Chamber Logo" class="logo-small">
+                <h3>Chamber of Commerce</h3>
+                <p>123 Business Avenue<br>Commerce City, ST 12345<br>Phone: (555) 123-4567<br>Email: info@chamber.org</p>
+            </div>
+            <div class="footer-info">
+                <p>&copy; <span id="year"></span> Kaluba Phillip</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+    <script src="scripts/site.js" defer></script>
+</body>
+</html>

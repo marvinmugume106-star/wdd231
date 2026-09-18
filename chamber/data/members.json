@@ -1,0 +1,98 @@
+[
+    {
+        "name": "TechVision Solutions",
+        "phone": "(256) 123-4567",
+        "address": "456 Tech Drive, Commerce City, ST 12345",
+        "website": "https://www.techvisionsolutions.example.com",
+        "image": "images/members/vision.jpg",
+        "membership": "Gold"
+    },
+    {
+        "name": "Premier Banking Group",
+        "phone": "(256) 234-5678",
+        "address": "789 Finance Avenue, Commerce City, ST 12345",
+        "website": "https://www.premierbankinggroup.example.com",
+        "image": "images/members/premier.jpg",
+        "membership": "Gold"
+    },
+    {
+        "name": "Sunrise Restaurant & Catering",
+        "phone": "(256) 345-6789",
+        "address": "321 Main Street, Commerce City, ST 12345",
+        "website": "https://www.sunriserestaurant.example.com",
+        "image": "images/members/sun.jpg",
+        "membership": "Silver"
+    },
+    {
+        "name": "EcoGreen Sustainability",
+        "phone": "(256) 456-7890",
+        "address": "654 Green Lane, Commerce City, ST 12345",
+        "website": "https://www.ecogreensustainability.example.com",
+        "image": "images/members/eco.jpg",
+        "membership": "Silver"
+    },
+    {
+        "name": "Healthcare Plus Clinic",
+        "phone": "(256) 567-8901",
+        "address": "987 Medical Center, Commerce City, ST 12345",
+        "website": "https://www.healthcareplusclinic.example.com",
+        "image": "images/members/health.jpg",
+        "membership": "Gold"
+    },
+    {
+        "name": "Creative Design Studio",
+        "phone": "(256) 678-9012",
+        "address": "111 Artist Road, Commerce City, ST 12345",
+        "website": "https://www.creativedesignstudio.example.com",
+        "image": "images/members/creative.jpg",
+        "membership": "Silver"
+    },
+    {
+        "name": "Corporate Training Experts",
+        "phone": "(256) 789-0123",
+        "address": "222 Education Drive, Commerce City, ST 12345",
+        "website": "https://www.corporatetrainingexperts.example.com",
+        "image": "images/members/corporate.jpg",
+        "membership": "Bronze"
+    },
+    {
+        "name": "Local Marketing Pros",
+        "phone": "(256) 890-1234",
+        "address": "333 Advertising Way, Commerce City, ST 12345",
+        "website": "https://www.localmarketingpros.example.com",
+        "image": "images/members/local.png",
+        "membership": "Bronze"
+    },
+    {
+        "name": "Quality Automotive Services",
+        "phone": "(256) 901-2345",
+        "address": "444 Motor Avenue, Commerce City, ST 12345",
+        "website": "https://www.qualityautomotive.example.com",
+        "image": "images/members/automotive.svg",
+        "membership": "NP"
+    },
+    {
+        "name": "Premium Coffee House",
+        "phone": "(256) 012-3456",
+        "address": "555 Brew Street, Commerce City, ST 12345",
+        "website": "https://www.premiumcoffeehouse.example.com",
+        "image": "images/members/coffee.svg",
+        "membership": "NP"
+    },
+    {
+        "name": "City Real Estate Group",
+        "phone": "(256) 123-5678",
+        "address": "666 Property Lane, Commerce City, ST 12345",
+        "website": "https://www.cityrealestategroup.example.com",
+        "image": "images/members/realestate.svg",
+        "membership": "Silver"
+    },
+    {
+        "name": "Advanced Fitness Center",
+        "phone": "(256) 234-6789",
+        "address": "777 Wellness Drive, Commerce City, ST 12345",
+        "website": "https://www.advancedfitnesscenter.example.com",
+        "image": "images/members/fitness.svg",
+        "membership": "Bronze"
+    }
+]

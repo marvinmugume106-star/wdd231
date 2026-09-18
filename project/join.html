@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Kaluba Phillip" />
+  <meta name="description" content="Join the Uganda Arsenal Fan Community to connect with fellow supporters, get event updates, and find your local viewing hub." />
+  <title>Join — Uganda Arsenal Fan Community</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <svg width="40" height="40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="margin-right: 0.5rem;">
+          <rect width="200" height="200" fill="#EF0107"/>
+          <circle cx="100" cy="100" r="60" fill="white" stroke="gold" stroke-width="3"/>
+          <text x="100" y="120" font-size="80" font-weight="bold" text-anchor="middle" fill="#EF0107" font-family="Arial">A</text>
+        </svg>
+        <span>Uganda Arsenal Fans</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav aria-label="Primary" id="nav-menu" class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="join.html" aria-current="page">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Become part of the Uganda Arsenal Fan Community</h1>
+        <p>Sign up to get updates, join meetups, and connect with fellow Gooners.</p>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container">
+        <form class="form" id="joinForm">
+          <label>
+            Name:
+            <input class="input" type="text" name="name" required />
+          </label>
+          <label>
+            Email:
+            <input class="input" type="email" name="email" required />
+          </label>
+          <label>
+            Phone (optional):
+            <input class="input" type="tel" name="phone" />
+          </label>
+          <label>
+            City:
+            <select class="select" name="city" required>
+              <option value="">Select your city</option>
+              <option>Jinja</option>
+              <option>Kampala</option>
+              <option>Mbale</option>
+            </select>
+          </label>
+          <fieldset>
+            <legend>Preferred activities:</legend>
+            <label><input type="checkbox" name="activities" value="watch"> Watch parties</label>
+            <label><input type="checkbox" name="activities" value="football"> Five-a-side</label>
+            <label><input type="checkbox" name="activities" value="online"> Online discussions</label>
+          </fieldset>
+          <fieldset>
+            <legend>Membership level:</legend>
+            <label><input type="radio" name="level" value="free" checked> Free</label>
+            <label><input type="radio" name="level" value="premium"> Premium</label>
+            <label><input type="radio" name="level" value="gold"> Gold</label>
+          </fieldset>
+          <button class="btn secondary" type="submit">Join Now</button>
+        </form>
+        <div id="thankYou" style="display:none; margin-top:1rem; color:green; font-weight:bold;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2025 Uganda Arsenal Fan Community</small>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/menu.js"></script>
+  <script type="module" src="scripts/join.js"></script>
+</body>
+</html>

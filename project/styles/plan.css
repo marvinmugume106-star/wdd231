@@ -1,0 +1,57 @@
+/* assets/css/project-plan.css */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  background: #002D72;
+  color: #fff;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  margin: 2rem 0;
+}
+
+.section h2 {
+  color: #002D72;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 0.25rem;
+}
+
+.swatches {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.swatch {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.swatch.red { background: #EF0107; }
+.swatch.gold { background: #FFD700; color: #000; }
+.swatch.navy { background: #002D72; }
+.swatch.white { background: #FFFFFF; color: #000; border: 1px solid #ccc; }
+.swatch.gray { background: #333333; }
+
+.footer {
+  background: #002D72;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}

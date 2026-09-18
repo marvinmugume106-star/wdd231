@@ -1,0 +1,250 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #edf6f9;
+  color: #2b2d42;
+}
+
+
+/* Header: brand aligned left, keep menu toggle on the right */
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #006d77;
+  color: #fff;
+  padding: 0.6rem 1rem;
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.site-brand img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.site-name {
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+/* Keep the hamburger/menu toggle visually at the right */
+.menu-toggle {
+  margin-left: auto;
+}
+
+/* Hamburger visible by default on small screens */
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+}
+
+nav {
+  display: none;
+  background-color: #222; /* dark thin nav bar like wireframe */
+  width: 100%;
+}
+
+nav.open {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  border-bottom: 1px solid #006d77;
+}
+
+nav a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background-color: #111;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.student-photo img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Shared/global styles for content sections and images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-section,
+.photo-section,
+.projects-section {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+}
+
+.about-section {
+  border-left: 6px solid #00796b;
+}
+
+.photo-section {
+  border-left: 6px solid #455a64;
+  text-align: center;
+}
+
+.photo-section img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+main section {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  min-width: 250px;
+}
+
+/* Section heading bars (wireframe style) */
+main section h2 {
+  background-color: #222;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  margin: 0  -2rem 1rem -2rem; /* extend the bar to the edges of the section */
+  border-radius: 6px 6px 0 0;
+  font-size: 1rem;
+}
+
+/* Make the overall page title stand out */
+main > h1 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+/* Small-screen filters: stacked but evenly sized */
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.filters button {
+  flex: 1 1 30%;
+  min-width: 90px;
+  background: #e6e6e6;
+  color: #111;
+  border: 1px solid #bfbfbf;
+}
+
+.courses {
+  padding: 1rem;
+}
+
+/* Buttons styling */
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filters button {
+  background: #fff;
+  color: #006d77;
+  border: 1px solid #006d77;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.filters button:hover,
+.filters button:focus-visible,
+.filters button.active {
+  background: #006d77;
+  color: #fff;
+}
+
+#courses {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.course-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-left: 6px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card.completed {
+  border-left-color: #28a745;
+}
+
+.course-card:not(.completed) {
+  border-left-color: #dc3545;
+}
+
+.course-card:hover,
+.course-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+footer {
+  background-color: #006d77;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: #ffb703;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus-visible {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 3px solid #ffb703;
+  outline-offset: 4px;
+  border-radius: 4px;
+}

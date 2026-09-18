@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "category": "Live Scores",
+    "title": "Premier League Scores",
+    "description": "Real-time updates on Arsenal matches and Premier League standings",
+    "url": "https://www.flashscore.com/soccer/england/premier-league/",
+    "icon": "📊"
+  },
+  {
+    "id": 2,
+    "category": "Live Scores",
+    "title": "Arsenal Fixtures",
+    "description": "Full Arsenal fixture list with dates and kick-off times in EAT",
+    "url": "https://www.arsenal.com/fixtures",
+    "icon": "📅"
+  },
+  {
+    "id": 3,
+    "category": "Official News",
+    "title": "Arsenal Official News",
+    "description": "Latest news, match previews, and official Arsenal updates",
+    "url": "https://www.arsenal.com/news",
+    "icon": "📰"
+  },
+  {
+    "id": 4,
+    "category": "Official News",
+    "title": "Club Official Statements",
+    "description": "Player features, academy updates, and women's team coverage",
+    "url": "https://www.arsenal.com",
+    "icon": "🏟️"
+  },
+  {
+    "id": 5,
+    "category": "Fan Discussions",
+    "title": "WhatsApp Community",
+    "description": "Join our WhatsApp broadcast for match updates and community news",
+    "url": "#",
+    "icon": "💬"
+  },
+  {
+    "id": 6,
+    "category": "Fan Discussions",
+    "title": "Telegram Group",
+    "description": "Join the Telegram group for live match discussions and memes",
+    "url": "#",
+    "icon": "📱"
+  },
+  {
+    "id": 7,
+    "category": "Fan Discussions",
+    "title": "Reddit r/Gunners",
+    "description": "Join the global Gunners community on Reddit for match threads and analysis",
+    "url": "https://www.reddit.com/r/Gunners/",
+    "icon": "🔴"
+  },
+  {
+    "id": 8,
+    "category": "New Fan Guide",
+    "title": "How to Follow Arsenal",
+    "description": "Kickoff times in EAT, trusted viewing hubs map, and etiquette tips",
+    "url": "#",
+    "icon": "📖"
+  }
+]

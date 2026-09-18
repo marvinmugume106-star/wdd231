@@ -1,0 +1,287 @@
+/* assets/css/styles.css */
+/* Uganda Arsenal Fan Community — Global Styles
+   Mobile-first, accessible, and color-balanced
+*/
+
+:root {
+  /* Core palette */
+  --red: #EF0107;          /* Accent Red (sparingly) */
+  --gold: #FFD700;         /* Accent Gold */
+  --navy: #002D72;         /* Support color */
+  --white: #FFFFFF;        /* Base background */
+  --offwhite: #F8F9FA;     /* Soft section background */
+  --text: #333333;         /* Body text */
+
+  /* Semantic tokens */
+  --bg: var(--white);
+  --bg-soft: var(--offwhite);
+  --heading: var(--navy);
+  --accent: var(--red);
+  --accent-alt: var(--gold);
+  --border: #D9DEE3;
+
+  /* Layout */
+  --max-w: 1100px;
+  --radius: 8px;
+  --shadow: 0 2px 10px rgba(0,0,0,0.06);
+
+  /* Typography */
+  --font: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+  --fs-base: 16px;
+  --fs-h1: clamp(1.6rem, 3.5vw, 2.2rem);
+  --fs-h2: clamp(1.2rem, 2.5vw, 1.6rem);
+  --fs-h3: clamp(1rem, 2vw, 1.2rem);
+  --leading: 1.6;
+}
+
+* { box-sizing: border-box; }
+html { font-size: var(--fs-base); }
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: var(--leading);
+}
+
+a { color: var(--navy); text-decoration: none; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--gold);
+  color: #000;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  z-index: 999;
+}
+
+/* Header / Nav */
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: 0.75rem 0;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  color: var(--navy); font-weight: 700;
+}
+.brand img { width: 36px; height: 36px; border-radius: 50%; }
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 101;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--navy);
+  margin: 4px 0;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.hamburger[aria-expanded="true"] span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+.hamburger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger[aria-expanded="true"] span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-menu {
+  display: flex;
+}
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.75rem;
+}
+.nav a {
+  padding: 0.5rem 0.75rem; border-radius: 6px; font-weight: 600;
+}
+.nav a[aria-current="page"] {
+  color: var(--white);
+  background: var(--navy);
+}
+.nav a:hover {
+  background: var(--offwhite);
+}
+.nav a:active {
+  background: #eaeef2;
+}
+
+/* Mobile Menu Toggle */
+@media (max-width: 640px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: 100%;
+  }
+  .nav-menu.active {
+    max-height: 500px;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0;
+  }
+  .nav-menu li {
+    padding: 0.5rem 0;
+  }
+  .nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Hero */
+.hero {
+  padding: 2rem 0 1.5rem;
+  background: var(--bg);
+}
+.hero h1 {
+  color: var(--text); font-size: var(--fs-h1); margin: 0 0 0.75rem;
+}
+.cta {
+  display: inline-block;
+  background: var(--red); color: var(--white);
+  padding: 0.6rem 1rem; border-radius: 8px; font-weight: 700;
+  box-shadow: var(--shadow);
+  border: 2px solid transparent;
+}
+.cta:hover { filter: saturate(105%); }
+.cta:active { transform: translateY(1px); }
+.cta.alt {
+  background: var(--navy); border-color: var(--gold);
+}
+
+/* Sections */
+.section { padding: 1.5rem 0; }
+.section.soft { background: var(--bg-soft); }
+.section h2 { color: var(--heading); font-size: var(--fs-h2); margin: 0 0 0.75rem; }
+.section h3 { color: var(--heading); font-size: var(--fs-h3); margin: 0.75rem 0; }
+
+/* Grid helpers */
+.grid {
+  display: grid; gap: 1rem;
+}
+.grid.cols-2 {
+  grid-template-columns: 1fr;
+}
+.grid.cards-3 {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 780px) {
+  .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .grid.cards-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Cards */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-color: var(--red);
+}
+.card:active {
+  transform: translateY(-2px);
+}
+.card .thumb {
+  background: #e9eef5;
+  border: 1px dashed #cbd3dc;
+  height: 140px; border-radius: 6px; margin-bottom: 0.75rem;
+  transition: background 0.3s ease;
+}
+.card:hover .thumb {
+  background: #dce3f0;
+  border-color: var(--red);
+}
+
+/* Lists */
+ul.clean { list-style: none; padding: 0; margin: 0; }
+ul.bullets { padding-left: 1rem; }
+ul.bullets li::marker { color: var(--gold); }
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem 0; color: #555; background: var(--white);
+  text-align: center;
+}
+
+/* Forms (RSVP minimal) */
+.form {
+  display: grid; gap: 0.75rem;
+}
+.input, .select {
+  width: 100%; padding: 0.6rem 0.75rem; border-radius: 6px;
+  border: 1px solid var(--border); background: var(--white);
+}
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 0.5rem; padding: 0.6rem 1rem; border-radius: 8px;
+  background: var(--navy); color: var(--white); font-weight: 700;
+  border: 2px solid var(--gold);
+}
+.btn:hover { filter: brightness(1.05); }
+.btn.secondary {
+  background: var(--red); border-color: transparent;
+}
+
+/* Announce bar (optional for matchday updates) */
+.announce {
+  background: #fff9e6;
+  color: #5a4a00;
+  border-bottom: 1px solid #ffec99;
+  padding: 0.5rem;
+}

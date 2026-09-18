@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Join — Chamber Membership</title>
+  <meta name="author"  content="Kaluba Phillip">
+  <meta name="description" content="Apply to join the Commerce City Chamber — select your membership level and submit your application.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Join the Commerce City Chamber — Membership Application">
+  <meta property="og:description" content="Apply to join the Commerce City Chamber and choose a membership level that fits your business. Benefits scale from NP to Gold including events, advertising, and spotlights.">
+  <meta property="og:image" content="https://mexphillips.github.io/wdd231/chamber/images/hero.jpg">
+  <meta property="og:url" content="https://mexphillips.github.io/wdd231/chamber/join.html">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/override.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/logo.jpg" alt="Chamber Logo" class="logo">
+      <div class="header-info">
+        <h1>Chamber of Commerce</h1>
+        <p class="tagline">Building Stronger Communities</p>
+      </div>
+      <div class="header-socials">
+        <a href="#" title="Facebook"><i>f</i></a>
+        <a href="#" title="LinkedIn"><i>in</i></a>
+      </div>
+    </div>
+    <nav>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+      </ul>
+    </nav>
+    <div class="current-date" id="current-date"></div>
+  </header>
+
+  <main class="join-page">
+    <section class="join-form-section">
+      <h2>Membership Application</h2>
+      <form id="join-form" action="thankyou.html" method="get" novalidate>
+        <div class="form-grid">
+          <label for="first">First name<span class="required">*</span>
+            <input id="first" name="first" type="text" autocomplete="given-name" title="Enter your first name" required>
+          </label>
+
+          <label for="last">Last name<span class="required">*</span>
+            <input id="last" name="last" type="text" autocomplete="family-name" title="Enter your last name" required>
+          </label>
+
+          <label for="title">Organizational title<span class="required">*</span>
+            <input id="title" name="title" type="text" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" title="Only letters, spaces and hyphens. Minimum 7 characters." required>
+          </label>
+
+          <label for="email">Email<span class="required">*</span>
+            <input id="email" name="email" type="email" autocomplete="email" title="Enter your email address" placeholder="name@example.com" required>
+          </label>
+
+          <label for="mobile">Mobile phone<span class="required">*</span>
+            <input id="mobile" name="mobile" type="tel" autocomplete="tel" title="Enter your mobile phone number" required>
+          </label>
+
+          <label for="business">Business / Organization<span class="required">*</span>
+            <input id="business" name="business" type="text" autocomplete="organization" title="Enter your business or organization name" required>
+          </label>
+
+          <fieldset class="membership-level">
+            <legend>Membership Level<span class="required">*</span></legend>
+            <label><input type="radio" name="level" value="np" checked> NP</label>
+            <label><input type="radio" name="level" value="bronze"> Bronze</label>
+            <label><input type="radio" name="level" value="silver"> Silver</label>
+            <label><input type="radio" name="level" value="gold"> Gold</label>
+          </fieldset>
+
+          <label for="description">Business description
+            <textarea id="description" name="description" rows="4" title="Brief description of your organization" placeholder="Describe your business or services"></textarea>
+          </label>
+
+          <input type="hidden" id="timestamp" name="timestamp" value="">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="cta-button">Submit Application</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="membership-cards">
+      <h2>Membership Levels</h2>
+      <div class="cards">
+        <article class="card np" data-level="np">
+          <h3>NP</h3>
+          <p>Basic listing and access to newsletters.</p>
+          <a href="#" class="details-link" data-level="np">Benefits</a>
+        </article>
+
+        <article class="card bronze" data-level="bronze">
+          <h3>Bronze</h3>
+          <p>Events, basic training, and member directory listing.</p>
+          <a href="#" class="details-link" data-level="bronze">Benefits</a>
+        </article>
+
+        <article class="card silver" data-level="silver">
+          <h3>Silver</h3>
+          <p>All Bronze benefits + advertising and discounts.</p>
+          <a href="#" class="details-link" data-level="silver">Benefits</a>
+        </article>
+
+        <article class="card gold" data-level="gold">
+          <h3>Gold</h3>
+          <p>All Silver benefits + spotlights and premium placement.</p>
+          <a href="#" class="details-link" data-level="gold">Benefits</a>
+        </article>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modals container -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-label="Membership benefits">
+      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+      <h3 id="modal-title">Benefits</h3>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="images/logo.jpg" alt="Chamber Logo" class="logo-small">
+        <h3>Chamber of Commerce</h3>
+        <p>123 Business Avenue<br>Commerce City, ST 12345<br>Phone: (555) 123-4567<br>Email: info@chamber.org</p>
+      </div>
+      <div class="footer-info">
+        <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/modals.js" defer></script>
+  <script src="scripts/site.js" defer></script>
+</body>
+</html>

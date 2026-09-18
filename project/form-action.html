@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Kaluba Phillip" />
+  <meta name="description" content="Submission confirmation for joining the Uganda Arsenal Fan Community." />
+  <title>Form Submission — Uganda Arsenal Fan Community</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <svg width="40" height="40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="margin-right: 0.5rem;">
+          <rect width="200" height="200" fill="#EF0107"/>
+          <circle cx="100" cy="100" r="60" fill="white" stroke="gold" stroke-width="3"/>
+          <text x="100" y="120" font-size="80" font-weight="bold" text-anchor="middle" fill="#EF0107" font-family="Arial">A</text>
+        </svg>
+        <span>Uganda Arsenal Fans</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav aria-label="Primary" id="nav-menu" class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section soft">
+      <div class="container">
+        <h1>Submission Confirmed! 🎉</h1>
+        <p>Thank you for joining the Uganda Arsenal Fan Community. Here's what we received:</p>
+
+        <div id="submissionData" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0;">
+          <!-- Submission details will be rendered here -->
+        </div>
+
+        <p style="color: #666; margin-top: 1.5rem;">
+          A confirmation email has been sent to you with details about your membership and upcoming events in your selected city.
+        </p>
+
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="index.html" class="btn">Back to Home</a>
+          <a href="events.html" class="btn">View Upcoming Events</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2025 Uganda Arsenal Fan Community</small>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/menu.js"></script>
+  <script src="scripts/form-action.js" defer></script>
+</body>
+</html>

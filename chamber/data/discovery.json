@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Source of the Nile",
+    "address": "Nile Crescent, Jinja",
+    "description": "Historic site where the Nile River begins its journey north. Popular for boat rides.",
+    "image": "images/source-nile.webp",
+    "link": "https://www.ugandatourismcenter.com/source-of-the-nile/"
+  },
+  {
+    "title": "Jinja Central Market",
+    "address": "Main Street, Jinja",
+    "description": "Bustling market with fresh produce, crafts, and local delicacies.",
+    "image": "images/jinja-market.webp",
+    "link": "https://example.com/jinja-market"
+  },
+  {
+    "title": "Mabira Forest Reserve",
+    "address": "Kampala–Jinja Highway",
+    "description": "Tropical rainforest offering eco‑tours, bird watching, and canopy walks.",
+    "image": "images/mabira-forest.webp",
+    "link": "https://ugandawildlife.org/mabira-forest/"
+  },
+  {
+    "title": "Itanda Falls",
+    "address": "Itanda Village, Jinja District",
+    "description": "Spectacular rapids on the Nile, famous for white‑water rafting and scenic views.",
+    "image": "images/itanda-falls.webp",
+    "link": "https://example.com/itanda-falls"
+  },
+  {
+    "title": "Ripon Falls",
+    "address": "Lake Victoria, Jinja",
+    "description": "Historic waterfall once marking the start of the Nile, now submerged but commemorated.",
+    "image": "images/ripon-falls.webp",
+    "link": "https://example.com/ripon-falls"
+  },
+  {
+    "title": "Jinja Sailing Club",
+    "address": "Nile Crescent, Jinja",
+    "description": "Waterfront club offering sailing, dining, and community events.",
+    "image": "images/jinja-sailing.webp",
+    "link": "https://example.com/jinja-sailing-club"
+  },
+  {
+    "title": "Busoga Kingdom Palace",
+    "address": "Bugembe, Jinja",
+    "description": "Cultural site showcasing Busoga heritage and royal traditions.",
+    "image": "images/busoga-palace.webp",
+    "link": "https://example.com/busoga-palace"
+  },
+  {
+    "title": "Nile Breweries",
+    "address": "Jinja Industrial Area",
+    "description": "Major brewery producing Nile Special beer, offering guided tours.",
+    "image": "images/nile-breweries.webp",
+    "link": "https://example.com/nile-breweries"
+  }
+]

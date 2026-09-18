@@ -1,0 +1,20 @@
+
+:root {
+  --chamber-primary: #1a5f7a;
+  --chamber-accent: #d4af37;
+}
+
+body {
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+footer {
+  box-sizing: border-box;
+}

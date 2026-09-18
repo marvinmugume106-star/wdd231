@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Kaluba Phillip" />
+  <meta name="description" content="Upcoming events and meetups for Arsenal fans across Uganda. Join watch parties in Kampala, Jinja, Mbale, and more." /> 
+  <title>Uganda Arsenal Fan Community — Events</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <svg width="40" height="40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="margin-right: 0.5rem;">
+          <rect width="200" height="200" fill="#EF0107"/>
+          <circle cx="100" cy="100" r="60" fill="white" stroke="gold" stroke-width="3"/>
+          <text x="100" y="120" font-size="80" font-weight="bold" text-anchor="middle" fill="#EF0107" font-family="Arial">A</text>
+        </svg>
+        <span>Uganda Arsenal Fans</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav aria-label="Primary" id="nav-menu" class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html" aria-current="page">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <h1>Upcoming events</h1>
+        <p>All times in East Africa Time (EAT). Venues confirmed by local city leads.</p>
+        <div class="grid cards-3" id="events-container">
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container">
+        <h2>Past events</h2>
+        <div class="grid cards-3">
+          <figure class="card">
+            <figcaption>North London Derby — Full house in Jinja</figcaption>
+          </figure>
+          <figure class="card">
+            <figcaption>Season opener — Kampala meetup</figcaption>
+          </figure>
+          <figure class="card">
+            <figcaption>Five‑a‑side — Friendly tournament</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2025 Uganda Arsenal Fan Community</small>
+    </div>
+  </footer>
+  <script type="module" src="scripts/menu.js"></script>
+  <script type="module" src="scripts/events.js"></script>
+</body>
+</html>
