@@ -39,7 +39,7 @@ function createMemberElement(member) {
   if (currentView === 'grid') {
     // Grid view: card with image, name, contact
     article.innerHTML = `
-      <img src="${member.image}" alt="${member.name}" class="member-image" onerror="this.src='images/logo.jpg'">
+      <img src="${member.image}" alt="${member.name}" class="member-image" onerror="this.src='images/logo.webp'">
       <div class="member-info">
         <h3>${member.name}</h3>
         <p class="membership-badge">${member.membership}</p>
@@ -52,7 +52,7 @@ function createMemberElement(member) {
     // List view: table-like row
     article.innerHTML = `
       <div class="member-list-row">
-        <img src="${member.image}" alt="${member.name}" class="member-image-small" onerror="this.src='images/logo.jpg'">
+        <img src="${member.image}" alt="${member.name}" class="member-image-small" onerror="this.src='images/logo.webp'">
         <div class="member-list-info">
           <h4>${member.name}</h4>
           <p class="membership-badge">${member.membership}</p>

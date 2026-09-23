@@ -46,7 +46,7 @@ async function displaySpotlights() {
             
             spotlightsHTML += `
                 <div class="spotlight-card">
-                    <img src="${member.image}" alt="${member.name} logo" loading="lazy" onerror="this.src='images/logo.jpg'">
+                    <img src="${member.image}" alt="${member.name} logo" loading="lazy" onerror="this.src='images/logo.webp'">
                     <h3>${member.name}</h3>
                     <div class="membership-badge ${membershipClass}">
                         ${member.membership.toUpperCase()} Member

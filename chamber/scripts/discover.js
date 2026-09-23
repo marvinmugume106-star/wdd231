@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const html = members.map(m => `
       <article class="member-card">
-        <img class="member-logo lazy" data-src="${m.image}" src="images/logo.jpg" alt="${m.name} logo" loading="lazy">
+        <img class="member-logo lazy" data-src="${m.image}" src="images/logo.webp" alt="${m.name} logo" loading="lazy">
         <div class="member-info">
           <h3>${m.name}</h3>
           <p class="membership">${m.membership}</p>
