@@ -1,46 +1,112 @@
 
 
-const WEATHER_API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY'; 
-const CHAMBER_LATITUDE = 40.7128; 
-const CHAMBER_LONGITUDE = -74.0060; 
+const CHAMBER_LATITUDE = 39.7847;
+const CHAMBER_LONGITUDE = -104.9444;
 
+function getWeatherDescription(code) {
+    const descriptions = {
+        0: 'Clear sky',
+        1: 'Mainly clear',
+        2: 'Partly cloudy',
+        3: 'Overcast',
+        45: 'Foggy',
+        48: 'Depositing rime fog',
+        51: 'Light drizzle',
+        53: 'Drizzle',
+        55: 'Heavy drizzle',
+        56: 'Freezing drizzle',
+        57: 'Heavy freezing drizzle',
+        61: 'Slight rain',
+        63: 'Rain',
+        65: 'Heavy rain',
+        66: 'Freezing rain',
+        67: 'Heavy freezing rain',
+        71: 'Slight snow',
+        73: 'Snow',
+        75: 'Heavy snow',
+        77: 'Snow grains',
+        80: 'Rain showers',
+        81: 'Heavy showers',
+        82: 'Violent showers',
+        85: 'Snow showers',
+        86: 'Heavy snow showers',
+        95: 'Thunderstorm',
+        96: 'Thunderstorm with hail',
+        99: 'Severe thunderstorm'
+    };
+
+    return descriptions[code] || 'Variable conditions';
+}
+
+function getWeatherIcon(code) {
+    const iconMap = {
+        0: '☀️',
+        1: '🌤️',
+        2: '⛅',
+        3: '☁️',
+        45: '🌫️',
+        48: '🌫️',
+        51: '🌦️',
+        53: '🌦️',
+        55: '🌧️',
+        56: '🌧️',
+        57: '🌧️',
+        61: '🌧️',
+        63: '🌧️',
+        65: '🌧️',
+        66: '🌧️',
+        67: '🌧️',
+        71: '❄️',
+        73: '❄️',
+        75: '❄️',
+        77: '❄️',
+        80: '🌦️',
+        81: '🌧️',
+        82: '🌧️',
+        85: '🌨️',
+        86: '🌨️',
+        95: '⛈️',
+        96: '⛈️',
+        99: '⛈️'
+    };
+
+    return iconMap[code] || '🌤️';
+}
 
 async function displayWeather() {
     const weatherContainer = document.getElementById('weather-container');
-    
+
     try {
-    
-        const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/forecast?lat=${CHAMBER_LATITUDE}&lon=${CHAMBER_LONGITUDE}&units=imperial&appid=${WEATHER_API_KEY}`
-        );
+        const url = new URL('https://api.open-meteo.com/v1/forecast');
+        url.search = new URLSearchParams({
+            latitude: CHAMBER_LATITUDE,
+            longitude: CHAMBER_LONGITUDE,
+            current: 'temperature_2m,weather_code',
+            daily: 'temperature_2m_max,temperature_2m_min,weather_code',
+            timezone: 'auto',
+            forecast_days: '3'
+        }).toString();
+
+        const response = await fetch(url);
 
         if (!response.ok) {
             throw new Error('Weather data not available');
         }
 
         const data = await response.json();
+        const current = data.current;
+        const current_temp = Math.round(current.temperature_2m);
+        const current_desc = getWeatherDescription(current.weather_code);
+        const current_icon = getWeatherIcon(current.weather_code);
 
-        
-        const current = data.list[0];
-        const current_temp = Math.round(current.main.temp);
-        const current_desc = current.weather[0].description;
-        const current_icon = getWeatherIcon(current.weather[0].main);
+        const forecast = data.daily.time.map((dateString, index) => ({
+            date: new Date(dateString),
+            high: Math.round(data.daily.temperature_2m_max[index]),
+            low: Math.round(data.daily.temperature_2m_min[index]),
+            desc: getWeatherDescription(data.daily.weather_code[index]),
+            icon: getWeatherIcon(data.daily.weather_code[index])
+        }));
 
-       
-        for (let i = 0; i < data.list.length; i += 8) {
-            if (forecast.length < 3) {
-                const dayData = data.list[i];
-                forecast.push({
-                    date: new Date(dayData.dt * 1000),
-                    high: Math.round(dayData.main.temp_max),
-                    low: Math.round(dayData.main.temp_min),
-                    desc: dayData.weather[0].description,
-                    icon: getWeatherIcon(dayData.weather[0].main)
-                });
-            }
-        }
-
-        
         let weatherHTML = `
             <div class="current-weather">
                 <h3>Current Weather</h3>
@@ -55,7 +121,7 @@ async function displayWeather() {
             <div class="forecast">
         `;
 
-        forecast.forEach((day, index) => {
+        forecast.forEach((day) => {
             const dayName = day.date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
             weatherHTML += `
                 <div class="forecast-day">
@@ -74,45 +140,15 @@ async function displayWeather() {
 
         weatherHTML += `</div>`;
         weatherContainer.innerHTML = weatherHTML;
-
     } catch (error) {
         console.error('Error fetching weather:', error);
         weatherContainer.innerHTML = `
             <div class="current-weather">
                 <h3>Weather Information Unavailable</h3>
-                <p>Unable to load weather data. Please check your API key or try again later.</p>
-                <p style="font-size: 0.85rem; margin-top: 1rem; opacity: 0.8;">
-                    To use weather data, get a free API key from <a href="https://openweathermap.org/api" style="color: inherit; text-decoration: underline;">openweathermap.org</a>
-                </p>
+                <p>Unable to load weather data right now. Please try again later.</p>
             </div>
         `;
     }
 }
-
-
-function getWeatherIcon(condition) {
-    const iconMap = {
-        'Clear': '☀️',
-        'Clouds': '☁️',
-        'Overcast': '☁️',
-        'Drizzle': '🌦️',
-        'Rain': '🌧️',
-        'Thunderstorm': '⛈️',
-        'Snow': '❄️',
-        'Mist': '🌫️',
-        'Smoke': '💨',
-        'Haze': '🌫️',
-        'Dust': '🌪️',
-        'Fog': '🌫️',
-        'Sand': '🌪️',
-        'Ash': '🌋',
-        'Squall': '💨',
-        'Tornado': '🌪️',
-        'Partly cloudy': '⛅'
-    };
-    
-    return iconMap[condition] || '🌤️';
-}
-
 
 document.addEventListener('DOMContentLoaded', displayWeather);
