@@ -45,7 +45,7 @@ function createMemberElement(member) {
         <p class="membership-badge">${member.membership}</p>
         <p><strong>Phone:</strong> <a href="tel:${member.phone}">${member.phone}</a></p>
         <p><strong>Address:</strong> ${member.address}</p>
-        <p><a href="${member.website}" target="_blank" class="website-link">Visit Website →</a></p>
+        <p><a href="${member.website}" target="_blank" rel="noopener noreferrer" class="website-link">Visit Website →</a></p>
       </div>
     `;
   } else {
@@ -59,7 +59,7 @@ function createMemberElement(member) {
         </div>
         <div class="member-list-contact">
           <p><a href="tel:${member.phone}">${member.phone}</a></p>
-          <p><a href="${member.website}" target="_blank">Website</a></p>
+          <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">Website</a></p>
         </div>
         <p class="member-list-address">${member.address}</p>
       </div>

@@ -54,7 +54,7 @@ async function displaySpotlights() {
                     <div class="spotlight-info">
                         <p><strong>Phone:</strong> ${member.phone}</p>
                         <p><strong>Address:</strong> ${member.address}</p>
-                        <a href="${member.website}" target="_blank" class="spotlight-link">Visit Website →</a>
+                        <a href="${member.website}" target="_blank" rel="noopener noreferrer" class="spotlight-link">Visit Website →</a>
                     </div>
                 </div>
             `;

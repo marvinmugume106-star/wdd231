@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3>${m.name}</h3>
           <p class="membership">${m.membership}</p>
           <p class="member-contact">${m.phone}</p>
-          <a href="${m.website}" target="_blank" rel="noopener" class="member-link">Visit</a>
+          <a href="${m.website}" target="_blank" rel="noopener noreferrer" class="member-link">Visit</a>
         </div>
       </article>
     `).join('');
