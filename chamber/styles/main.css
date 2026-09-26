@@ -56,6 +56,7 @@ header {
     min-width: 200px;
 }
 
+.header-info h1,
 .header-info .brand-name {
     font-size: 1.8rem;
     margin: 0;
@@ -185,7 +186,8 @@ main {
     border-radius: 5px;
 }
 
-.hero-content h1 {
+.hero-content h1,
+.hero-content h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -543,6 +545,7 @@ footer {
         min-width: auto;
     }
 
+    .header-info h1,
     .header-info .brand-name {
         font-size: 1.4rem;
     }
@@ -556,7 +559,8 @@ footer {
         max-width: 90%;
     }
 
-    .hero-content h1 {
+    .hero-content h1,
+    .hero-content h2 {
         font-size: 1.4rem;
     }
 
@@ -628,7 +632,7 @@ footer {
 .discover-page .members-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 .discover-page .member-card { display:flex; gap: 0.75rem; align-items:center; background:var(--white); padding:0.75rem; border-radius:6px; }
 .member-logo { width:80px; height:80px; object-fit:contain; border-radius:6px; background:#fff; border:1px solid var(--border-color); }
-.member-info h3 { margin:0 0 0.25rem 0; }
+.discover-page .member-info h3 { margin:0 0 0.25rem 0; }
 .member-link { display:inline-block; margin-top:0.5rem; color:var(--primary-color); text-decoration:none; font-weight:600 }
 
 .visit-info { margin-bottom: 0.5rem; color: var(--light-text); }
@@ -653,6 +657,12 @@ footer {
     background: var(--white);
     padding: 1rem;
     border-radius: 8px;
+}
+
+.join-form-section > h1 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .form-grid {
