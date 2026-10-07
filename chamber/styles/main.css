@@ -619,28 +619,199 @@ footer {
     }
 }
 
-/* Discover page styles */
-.discover-page { padding: 1.5rem; max-width: 1200px; margin: 0 auto; }
-.discover-page .hero { height: 220px; margin-bottom: 1rem; }
-.demographics-grid { display: grid; grid-template-columns: repeat(1,1fr); gap: 1rem; }
-.demographics-grid .stat { background: var(--white); padding: 1rem; border-radius:6px; text-align:center; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-.events-list { display: grid; gap: 0.75rem; }
-.events-list .event-card { background: var(--white); padding: 1rem; border-radius:6px; }
-.attraction-grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
-.attraction img { width:100%; height:160px; object-fit:cover; border-radius:6px; }
+.discover-page {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-.discover-page .members-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
-.discover-page .member-card { display:flex; gap: 0.75rem; align-items:center; background:var(--white); padding:0.75rem; border-radius:6px; }
-.member-logo { width:80px; height:80px; object-fit:contain; border-radius:6px; background:#fff; border:1px solid var(--border-color); }
-.discover-page .member-info h3 { margin:0 0 0.25rem 0; }
-.member-link { display:inline-block; margin-top:0.5rem; color:var(--primary-color); text-decoration:none; font-weight:600 }
+.discover-page section {
+  margin-bottom: 2rem;
+}
 
-.visit-info { margin-bottom: 0.5rem; color: var(--light-text); }
+.discover-page .hero {
+  height: 260px;
+  margin-bottom: 1.5rem;
+}
+
+.discover-page .hero-content {
+  max-width: 620px;
+}
+
+.demographics-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.demographics-grid .stat,
+.events-list .event-card,
+.discovery-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.demographics-grid .stat {
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.events-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.events-list .event-card {
+  padding: 1rem 1.1rem;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.visit-info {
+  margin-bottom: 0;
+  color: var(--light-text);
+  font-weight: 600;
+}
+
+.discovery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+.discovery-card {
+  overflow: hidden;
+  border: 1px solid rgba(26, 95, 122, 0.12);
+}
+
+.discovery-card:nth-child(1) { grid-area: card1; }
+.discovery-card:nth-child(2) { grid-area: card2; }
+.discovery-card:nth-child(3) { grid-area: card3; }
+.discovery-card:nth-child(4) { grid-area: card4; }
+.discovery-card:nth-child(5) { grid-area: card5; }
+.discovery-card:nth-child(6) { grid-area: card6; }
+.discovery-card:nth-child(7) { grid-area: card7; }
+.discovery-card:nth-child(8) { grid-area: card8; }
+
+.discovery-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, #dfe9f3, #b7d7f5);
+  filter: saturate(1.2) contrast(1.05);
+}
+
+.discovery-card:nth-child(1) .discovery-image { filter: hue-rotate(10deg) saturate(1.4) brightness(1.08); }
+.discovery-card:nth-child(2) .discovery-image { filter: hue-rotate(28deg) saturate(1.4) brightness(1.08); }
+.discovery-card:nth-child(3) .discovery-image { filter: hue-rotate(55deg) saturate(1.4) brightness(1.08); }
+.discovery-card:nth-child(4) .discovery-image { filter: hue-rotate(95deg) saturate(1.4) brightness(1.08); }
+.discovery-card:nth-child(5) .discovery-image { filter: hue-rotate(145deg) saturate(1.4) brightness(1.08); }
+.discovery-card:nth-child(6) .discovery-image { filter: hue-rotate(190deg) saturate(1.4) brightness(1.08); }
+.discovery-card:nth-child(7) .discovery-image { filter: hue-rotate(230deg) saturate(1.4) brightness(1.08); }
+.discovery-card:nth-child(8) .discovery-image { filter: hue-rotate(290deg) saturate(1.4) brightness(1.08); }
+
+.card-content {
+  padding: 1rem 1rem 1.2rem;
+}
+
+.card-content h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.25rem;
+}
+
+.card-address {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  color: var(--light-text);
+  margin-bottom: 0.9rem;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.status-message {
+  padding: 1rem;
+  background: var(--white);
+  border-radius: 10px;
+}
 
 @media (min-width: 700px) {
-    .demographics-grid { grid-template-columns: repeat(3,1fr); }
-    .attraction-grid { grid-template-columns: repeat(3, 1fr); }
-    .discover-page .members-grid { grid-template-columns: repeat(3, 1fr); }
+  .demographics-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .events-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .discovery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+@media (min-width: 1100px) {
+  .discovery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6"
+      "card7 card8 card8";
+  }
+}
+
+@media (hover: hover) and (min-width: 700px) {
+  .discovery-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .discovery-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .discovery-image {
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+
+  .discovery-image:hover {
+    transform: scale(1.03);
+    filter: saturate(1.08);
+  }
 }
 
 
