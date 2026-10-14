@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const isExternal = resource.url.startsWith("http") || resource.url.startsWith("https");
         
         if (isExternal) {
-          article.style.cursor = "pointer";
+          article.classList.add("is-clickable");
           article.tabIndex = 0;
         }
         
-        const titleContent = isExternal 
-          ? `<a href="${resource.url}" target="_blank" style="color: inherit; text-decoration: none;" aria-label="Open ${resource.title}">${resource.title}</a>` 
+        const titleContent = isExternal
+          ? `<a class="resource-link" href="${resource.url}" target="_blank" aria-label="Open ${resource.title}">${resource.title}</a>`
           : resource.title;
         
         article.innerHTML = `
@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isExternal) {
           const link = article.querySelector("a");
           
-          article.addEventListener("click", () => {
+          article.addEventListener("click", (event) => {
+            if (event.target.closest("a")) return;
             link.click();
           });
           

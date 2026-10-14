@@ -4,13 +4,13 @@ import { validateEmail, formatDate } from "./utils.js";
 // Modal Dialog Setup for RSVP confirmation
 const createModal = () => {
   const modalHTML = `
-    <div id="rsvpModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center;">
+    <div id="rsvpModal" class="rsvp-overlay" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
       <div class="rsvp-dialog">
         <h2 id="modalTitle">RSVP Confirmation</h2>
         <p id="modalMessage"></p>
-        <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-          <button id="confirmBtn" class="btn" style="flex: 1;">Confirm RSVP</button>
-          <button id="closeModalBtn" class="btn secondary" style="flex: 1;">Cancel</button>
+        <div class="rsvp-actions">
+          <button id="confirmBtn" class="btn">Confirm RSVP</button>
+          <button id="closeModalBtn" class="btn secondary">Cancel</button>
         </div>
       </div>
     </div>
@@ -59,8 +59,8 @@ async function loadEvents() {
       let currentIndex = 0;
       img.src = imageSet[currentIndex];
       img.alt = event.title;
-      img.style.cssText = "width: 100%; height: 200px; background-color: #ddd; object-fit: cover; border-radius: 6px; margin-bottom: 0.75rem;";
-      img.onerror = function() { this.style.display = 'none'; };
+      img.className = "event-image";
+      img.onerror = function() { this.classList.add("is-hidden"); };
 
       // Content
       const h3 = document.createElement("h3"); h3.textContent = event.title;
@@ -99,8 +99,11 @@ async function loadEvents() {
       if (imageSet.length > 1) {
         setInterval(() => {
           currentIndex = (currentIndex + 1) % imageSet.length;
-          img.style.opacity = "0.5";
-          setTimeout(() => { img.src = imageSet[currentIndex]; img.style.opacity = "1"; }, 250);
+          img.classList.add("is-fading");
+          setTimeout(() => {
+            img.src = imageSet[currentIndex];
+            img.classList.remove("is-fading");
+          }, 250);
         }, 10000);
       }
     });
@@ -155,7 +158,7 @@ function showRSVPModal(name, email, eventTitle, form, button) {
   if (!modal) return;
   
   message.textContent = `Are you ready to RSVP for "${eventTitle}"? A confirmation will be sent to ${email}.`;
-  modal.style.display = "flex";
+  modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
   confirmBtn.focus();
   
@@ -184,7 +187,7 @@ function showRSVPModal(name, email, eventTitle, form, button) {
 function closeRSVPModal() {
   const modal = document.getElementById("rsvpModal");
   if (modal) {
-    modal.style.display = "none";
+    modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
   }
 }

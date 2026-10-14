@@ -19,26 +19,26 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Display submitted data using template literals and DOM manipulation
   const dataHTML = `
-    <div style="display: grid; gap: 1rem;">
-      <div>
+    <div class="submission-fields">
+      <div class="submission-field">
         <strong>Name:</strong><br>
-        <span style="color: var(--navy); font-size: 1.1rem;">${escapeHtml(name)}</span>
+        <span class="submission-value">${escapeHtml(name)}</span>
       </div>
-      <div>
+      <div class="submission-field">
         <strong>Email:</strong><br>
-        <span style="color: var(--navy); font-size: 1.1rem;">${escapeHtml(email)}</span>
+        <span class="submission-value">${escapeHtml(email)}</span>
       </div>
-      <div>
+      <div class="submission-field">
         <strong>City:</strong><br>
-        <span style="color: var(--navy); font-size: 1.1rem;">${escapeHtml(city)}</span>
+        <span class="submission-value">${escapeHtml(city)}</span>
       </div>
-      <div>
+      <div class="submission-field">
         <strong>Membership Level:</strong><br>
-        <span style="color: var(--navy); font-size: 1.1rem; text-transform: capitalize;">${escapeHtml(level)}</span>
+        <span class="submission-value membership-level">${escapeHtml(level)}</span>
       </div>
-      <div>
+      <div class="submission-field">
         <strong>Preferred Activities:</strong><br>
-        <span style="color: var(--navy); font-size: 1.1rem;">${activities && activities.length > 0 ? escapeHtml(activities) : "None selected"}</span>
+        <span class="submission-value">${activities && activities.length > 0 ? escapeHtml(activities) : "None selected"}</span>
       </div>
     </div>
   `;

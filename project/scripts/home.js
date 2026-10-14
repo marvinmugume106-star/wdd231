@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           const img = document.createElement("img");
           img.alt = event.title;
-          img.style.cssText = "width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 0.75rem; transition: opacity 0.5s ease; display: block;";
+          img.className = "event-image";
           
           if (imageSet.length > 0) {
             img.src = imageSet[currentImageIndex];
@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
             // Rotate images every 10 seconds
             setInterval(() => {
               currentImageIndex = (currentImageIndex + 1) % imageSet.length;
-              img.style.opacity = "0.5";
+              img.classList.add("is-fading");
               setTimeout(() => {
                 img.src = imageSet[currentImageIndex];
-                img.style.opacity = "1";
+                img.classList.remove("is-fading");
               }, 250);
             }, 10000);
           }
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const cards = document.querySelectorAll(".card");
   cards.forEach(card => {
-    card.style.cursor = "pointer";
+    card.classList.add("is-clickable");
     
     card.addEventListener("click", () => {
       const link = card.querySelector("a");
