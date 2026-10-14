@@ -5,7 +5,7 @@ import { validateEmail, formatDate } from "./utils.js";
 const createModal = () => {
   const modalHTML = `
     <div id="rsvpModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center;">
-      <div style="background: white; border-radius: 8px; padding: 2rem; max-width: 500px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+      <div class="rsvp-dialog">
         <h2 id="modalTitle">RSVP Confirmation</h2>
         <p id="modalMessage"></p>
         <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
@@ -110,7 +110,7 @@ async function loadEvents() {
 
   } catch (error) {
     console.error("Error loading events:", error);
-    container.innerHTML = `<p style="color: red;">Error loading events. Please try again later.</p>`;
+    container.innerHTML = `<p class="error-message">Error loading events. Please try again later.</p>`;
   }
 }
 
@@ -167,7 +167,7 @@ function showRSVPModal(name, email, eventTitle, form, button) {
   const newCloseBtn = document.getElementById("closeModalBtn");
   
   newConfirmBtn.addEventListener("click", () => {
-    form.innerHTML = `<p style="color: green; font-weight: bold;">Thanks ${name}! You're confirmed for this event. Confirmation sent to ${email}.</p>`;
+    form.innerHTML = `<p class="success-message">Thanks ${name}! You're confirmed for this event. Confirmation sent to ${email}.</p>`;
     closeRSVPModal();
   });
   

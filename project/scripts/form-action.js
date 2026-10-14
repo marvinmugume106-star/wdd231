@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // If no data present, show error
   if (!name || !email) {
-    submissionData.innerHTML = `<p style="color: #d32f2f;">No submission data found. Please <a href="join.html">fill out the form</a> again.</p>`;
+    submissionData.innerHTML = `<p class="error-message">No submission data found. Please <a href="join.html">fill out the form</a> again.</p>`;
     return;
   }
   
